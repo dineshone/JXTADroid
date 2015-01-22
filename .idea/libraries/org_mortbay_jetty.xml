@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="org.mortbay.jetty">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/jetty/org.mortbay.jetty.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

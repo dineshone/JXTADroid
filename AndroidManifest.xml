@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.d0d0"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.wake_lock"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+
+    <application
+        android:name=".Global.ApplicationClass"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="jxta.impl.membership.pse.DialogAuthenticatorActivity"
+            android:description="@string/DialogAuthenticator_title"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:theme="@style/AppTheme" >
+            <intent-filter
+                android:icon="@drawable/ic_action_name"
+                android:priority="1" >
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            <activity
+            android:name="com.jxta.impl.util.Password"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        -->
+        <!--
+            <receiver android:name="com.android.d0d0.SpeechService.d0d0SpeechBroadcastReciever" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.bluetooth.devicepicker.action.LAUNCH" />
+            </intent-filter>
+        </receiver>
+        -->
+        <!--
+            <service
+            android:name="com.android.d0d0.SpeechService.d0d0SpeechService"
+            android:debuggable="true"
+            android:enabled="true"
+            android:icon="@drawable/ic_launcher"
+            android:isolatedProcess="false" >
+        </service>
+        -->
+        <service
+            android:name=".Service.edgeIntentService"
+            android:enabled="true"
+            android:exported="false"
+            android:isolatedProcess="false" >
+
+            <!-- android:process=":jxtaEdgeProcess" > -->
+        </service>
+        <service
+            android:name=".Service.edgeService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".Service.MediatorIntentService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name=".Service.MediatorService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+        <service
+            android:name=".Service.SpeechRecognizerIntentService"
+            android:exported="false" >
+        </service>
+        <service
+            android:name=".Service.SpeechRecognizerService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+    </application>
+
+</manifest>

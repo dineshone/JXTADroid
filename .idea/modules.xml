@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JXTADroid.iml" filepath="$PROJECT_DIR$/JXTADroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jxtadroid/jxtadroid.iml" filepath="$PROJECT_DIR$/jxtadroid/jxtadroid.iml" />
+    </modules>
+  </component>
+</project>
+
